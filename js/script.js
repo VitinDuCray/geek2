@@ -12,3 +12,6 @@ closeBtn.addEventListener("click", () => {
   sidebar.classList.remove("open");
   main.classList.remove("shifted");
 });
+
+//-------------------------------------------------------//
+

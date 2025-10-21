@@ -1,3 +1,4 @@
+/*-----------------------Formatação básica-----------------------*/
 * {
     margin: 0;
     padding: 0;
@@ -10,6 +11,7 @@ body {
     transition: all 0.3s;
 }
 
+/*-----------------------Header-----------------------*/
 header {
     display: flex;
     justify-content: space-between;
@@ -20,6 +22,7 @@ header {
     ul {
         display: flex;
         list-style: none;
+        gap: 15px;
         margin: 0;
         padding: 0;
     }
@@ -39,9 +42,24 @@ header {
 }
 
 .left, .right {
-  width: 250px;
+  width: 350px;
   display: flex;
   align-items: center;
+}
+
+.left {
+    button {
+        background: none;
+        border: none;
+        color: white;
+        font-weight: 700;
+        font-size: 19px;
+        margin-left: 15px;
+    }
+}
+
+.right {
+    justify-content: center;
 }
 
 .center {
@@ -50,8 +68,10 @@ header {
   transform: translateX(-50%);
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
+/*-----------------------Sidebar-----------------------*/
 .sidebar {
     height: 100vh;
     width: 0;
@@ -80,12 +100,46 @@ header {
     cursor: pointer;
 }
 
-.main-content {
+/*-----------------------Área Principal-----------------------*/
+.conteudo-principal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(235, 235, 235);
+    width: 100%;
     margin-left: 0;
     padding: 20px;
     transition: margin-left 0.3s;
 }
 
-.main-content.shifted {
+.conteudo-principal.shifted {
     margin-left: 250px;
+}
+
+.aba-produtos {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+}
+
+.produto {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+
+    img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .area-descricao {
+        background-color: aqua;
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }
